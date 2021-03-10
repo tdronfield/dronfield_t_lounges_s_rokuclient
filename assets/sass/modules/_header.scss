@@ -1,0 +1,46 @@
+.top-header{
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    .ham-menu {
+        border: none;
+        width: 25vw;
+        
+        img {
+            width: 10vw;
+            max-width: 25px;
+        }
+    }
+
+    .logo {
+        width: 25%;
+        max-width: 500px;
+
+        justify-self: center;
+    }
+
+    .search-bar {
+        display: flex;
+        flex-direction: row;
+
+        .search-button{
+            width: 7vw;
+            border: none;
+        }
+
+        input{
+            width: 18vw;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
