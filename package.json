@@ -1,0 +1,18 @@
+{
+  "name": "newrokuclient",
+  "version": "1.0.0",
+  "description": "Roku FrontEnd Client",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "start-dev": "nodemon app"
+  },
+  "keywords": [],
+  "author": "Taylor Dronfield, Shannon Lounges",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "http-proxy-middleware": "^1.0.6"
+  }
+}

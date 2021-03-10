@@ -1,0 +1,8 @@
+<section class="home-hero">
+    <!-- render dynamic content here -->
+    <!-- this rendering happens on the server side -->
+    {{!-- <h1>{{ message }}</h1> --}}
+
+    <!-- render a thumbnail for every movie -->
+    <moviethumb v-for="item in allMovies" :movie="item" :key="item.movies_id"></moviethumb>
+</section>
