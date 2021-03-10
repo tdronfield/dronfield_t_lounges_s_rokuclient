@@ -1,8 +1,17 @@
-.movie-thumb{
-    width: 150px;
-    cursor: pointer;
-    display: inline;
-    padding: 4px;
+.select-dropdown{
+    margin: 50px 0;
+    padding: 5px;
+    // background-color: #bf94e4;
+}
 
-    img { max-height: 220px;}
+.home-hero{
+    width: 95vw;
+
+    .movie-thumb{
+        width: 150px;
+        cursor: pointer;
+        padding: 4px;
+        display: inline;
+        img { max-height: 220px;}
+    }
 }
