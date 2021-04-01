@@ -1,51 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Roku Streaming Service</title>
-</head>
+
+{{>htmlhead}}
+
 <body>
     <main id="app">
-        <h1 class="hidden">Roku Flashback Streaming</h1>
-            <header class="top-header">
-                <!-- Hamburger Menu -->
-                <button class="ham-menu">
-                    <img src="images/ham-menu.svg" alt="A square with rounded corners with three horizontal lines spaced evenly from top to bottom">
-                </button>
-                
+        {{> header }}
 
-                <!-- Roku Flashback Logo --> 
-                <img class="logo" src="images/roku_light-logo.svg" alt="Words Roku Flashback written in purple font ">
-
-                <!-- Search Area -->
-                <form class="search-bar" action="GET">
-                    <button class="search-button">
-                        <img src="images/search.svg" alt="A magnifying glass">
-                    </button>
-                    <input type="text" placeholder="Search">
-                </form>
-            </header>
-        <!-- this is where handlebars will inject it's tempalates -->
-        <!-- this is like a php include statement -->
-        <!-- or a vue template -->
-        <select class="select-dropdown" name="movies_year" id="movies_year">
-            <option value="0">Select Year</option>
-            <option value="1">1990</option>
-        </select>
-
-        <select class="select-dropdown" name="movies_genre" id="movies_genre">
-            <option value="0">Select Genre</option>
-            <option value="1">Comedy</option>
-        </select>
-        <!-- body is a placeholder/syntax that hbs recognizes to inject dynamic code into -->
         {{{ body }}}
 
+        {{> footer }}
     </main>
 
-    <script defer type="module" src="scripts/main.js"></script>
+    {{> scripts }}
 </body>
 </html>
