@@ -4,22 +4,22 @@ const hbs = require('hbs');
 
 const app = express();
 
+hbs.registerPartials(path.join(__dirname, './views/templates'));
+hbs.partials = hbs.templates; // pre-process: this makes Vue work when working with hbs partials
+
+
 const port = process.env.PORT || 5000;
 
-// Set routing for views 
+// Tell HBS where our views content lives,
+// Like how we tell routes where to find index
 app.set("views", path.join(__dirname, "views"));
-
-// Using HBS engine to render views
+// Use the hbs engine to render everything in views
 app.set("view engine", "hbs");
 
-// Set public as static directory
 app.use(express.static(path.join(__dirname, "public")));
 
-// Use index.js as our index/primary view
 app.use("/", require("./routes/index"));
 
-// Listen on variable port (set above)
-// Print in terminal console where the app is running
 app.listen(port, () => {
     console.log(`app is running on ${port}`);
 })
