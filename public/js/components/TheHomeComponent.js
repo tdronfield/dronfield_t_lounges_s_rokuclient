@@ -14,7 +14,7 @@ export default {
             </div>
 
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
-                <video autoplay controls muted :src="'images/video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
+                <video autoplay controls muted :src="'images/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
             </div>
         </div>
 
@@ -44,7 +44,7 @@ export default {
                         <a href="family">Family</a>
                     </li>
                     <li>
-                        <a href="fantasyr">Fantasy</a>
+                        <a href="fantasy">Fantasy</a>
                     </li>
                     <li>
                         <a href="all">All</a>
@@ -52,7 +52,7 @@ export default {
                 </ul>
 
                 <div class="thumb-wrapper clearfix">
-                    <img v-for="media in retrievedMedia" :src="'images/video/' + media.movies_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
+                    <img v-for="media in retrievedMedia" :src="'images/' + media.movies_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
                 </div>
             </div>       
         </div> <!-- end 2-up for media info -->
