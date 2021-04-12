@@ -13,11 +13,12 @@ Roku Flashback is a streaming app project designed and built with families in mi
 - [App Prototype](https://xd.adobe.com/view/95bdb0c0-47ad-42ce-a507-693f8ee49dae-c0ee/) 
 
 ## Installation
+1. Download zip or git clone
+2. Start local servers
+3. run npm start for server and client
+4. Navigate in browser to specified port
+5. Log in and enjoy the viewing experience!
 
-Download zip or git clone and navigate to directory.
-
-## Usage
-TODO
 
 ## Contributing
 
