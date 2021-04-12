@@ -4,7 +4,15 @@ import HomeComponent from "./components/TheHomeComponent.js";
 
 const router = new VueRouter({
     routes: [
-        { path: "/", name: "root", component: LoginComponent },
+        { path: "/", name: "root", component: LoginComponent, beforeEnter: (to, from, next) => {
+            // if you're logged in (in local storage), go to home page
+            if (localStorage.getItem('cacheduser')){
+                let user = JSON.parse(localStorage.getItem('cacheduser'));
+                next({name: 'home', params: {currentuser: user}});
+            } else {
+                next();
+            }
+        }},
         { path: "/users", name: "users", component: AllUsers },
         { path: "/home", name: "home", component: HomeComponent, props: true}
     ]
@@ -14,7 +22,8 @@ const router = new VueRouter({
     const vm = new Vue({
         data: {
             authenticated: false,
-            isAdmin: false
+            isAdmin: false,
+            currentuser: undefined
         },
 
         created: function(){
@@ -38,6 +47,12 @@ const router = new VueRouter({
                 }
                 // redirect the user (push) back to the root (home/index) route
                 this.$router.push({ name: "root" });
+                this.currentUser = undefined;
+            },
+
+            authenticateUser(user) {
+                // debugger;
+                this.currentUser = user;
             }
         },
 

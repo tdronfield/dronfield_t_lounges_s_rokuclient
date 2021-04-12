@@ -77,6 +77,7 @@ export default {
 
     created: function() {
         this.loadMedia(null, 'movies');
+        this.$emit('setuser', this.currentuser);
     },
 
     methods: {
