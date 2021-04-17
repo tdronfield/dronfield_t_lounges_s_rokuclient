@@ -51,8 +51,8 @@ export default {
                     </li>
                 </ul>
 
-                <div class="thumb-wrapper clearfix">
-                    <img v-for="media in retrievedMedia" :src="'images/' + media.movies_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
+                <div class="movie-thumb-container">
+                    <img v-for="media in retrievedMedia" :src="'images/' + media.movies_cover" alt="media thumb" class="" @click="switchCurrentMedia(media)">
                 </div>
             </div>       
         </div> <!-- end 2-up for media info -->
