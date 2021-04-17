@@ -1,0 +1,28 @@
+.media-container{
+    video {
+        width: 100%;
+        display: block;
+    }
+}
+
+.media-navs{
+    padding: 10% 0;
+    
+    .media-type{
+        li { 
+            display: inline;
+            span {
+                padding-right: 10px;
+                i {display: inline;}
+            } 
+        }
+    }
+    
+    .media-info{
+        ul {
+            li {
+                display: inline;
+            }
+        }
+    }
+}

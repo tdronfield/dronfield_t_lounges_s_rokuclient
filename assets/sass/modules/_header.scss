@@ -1,4 +1,4 @@
-.top-header{
+.header-container{
     background-color: #fff;
 
     display: flex;
@@ -21,10 +21,9 @@
     }
 
     .logo {
-        width: 25%;
+        width: 50%;
         max-width: 500px;
-
-        justify-self: center;
+        margin: 0 auto;
     }
 
     .search-bar {
@@ -41,6 +40,14 @@
             border: none;
             padding: 0;
             margin: 0;
+        }
+    }
+
+    nav {
+        ul {
+            li {
+                display: inline;
+            }
         }
     }
 }
