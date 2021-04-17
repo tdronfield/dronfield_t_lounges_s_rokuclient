@@ -53,6 +53,10 @@ const router = new VueRouter({
             authenticateuser(user) {
                 // debugger;
                 this.currentuser = user;
+            },
+
+            showMenu(){
+                console.log("click");
             }
         },
 

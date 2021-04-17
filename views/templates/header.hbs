@@ -20,7 +20,7 @@
 
 	<img class="logo" src="images/roku_light-logo.svg" alt="Roku logo" width="90">
 
-	<nav>
+	<nav class="user-nav">
 		<ul v-if="currentuser">           
 			<li v-if="currentuser.user_avatar"><img class="small-avatar-rounded" :src='"images/" + currentuser.user_avatar'></li>
 			<li v-if="currentuser.user_admin"><i class="fas fa-cog"></i></li>
