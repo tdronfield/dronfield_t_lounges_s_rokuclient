@@ -1,0 +1,16 @@
+.container{
+    h1, h2, h3, h4, span, p, ul, li{
+        color: white;
+    }
+
+    .loginButton {
+        border: none;
+        background-color: white;
+        color: black;       
+        border-radius: 10px;
+
+        padding: 2.5%;
+
+        margin: 2.5%;
+    }
+}

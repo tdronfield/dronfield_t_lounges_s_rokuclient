@@ -6,32 +6,32 @@ export default {
     template: `
     <div class="container">
         <div class="row">
-            <div class="col-12 order-2 order-md-1 col-md-3 media-container">
+            <div class="media-container">
+                <video autoplay controls muted :src="'images/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
+            </div>
+
+            <div class="media-container">
                 <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
                 <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
                 <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
                 <span class="media-year">Released in {{currentMediaDetails.movies_year}}</span>
             </div>
-
-            <div class="col-12 order-1 order-md-2 col-md-9 media-container">
-                <video autoplay controls muted :src="'images/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
-            </div>
         </div>
 
-        <div class="row"> <!-- 2-up for nav and media info -->
-            <nav class="col-12 col-sm-3 side-nav">
+        <div class="media-navs"> <!-- 2-up for nav and media info -->
+            <nav class="">
                 <ul class="media-type">
                     <li v-for="media in mediaTypes" :data-type="media.description">
                         <span>
                             <i v-bind:class="[media.iconClass]"></i>
                         </span>
                         
-                        <span class="d-none d-md-block">{{ media.description }}</span>
+                        <span>{{ media.description }}</span>
                     </li>
                 </ul>
             </nav>
 
-            <div class="col-12 col-sm-9 media-info">
+            <div class="media-info">
                 <!-- genres for video -->
                 <ul class="media-genres">
                     <li>

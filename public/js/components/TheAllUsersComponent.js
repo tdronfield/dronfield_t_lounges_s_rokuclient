@@ -6,7 +6,7 @@ export default {
 	template: `
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="whos-watching">
 				<h1 class="user-message">{{ message }}</h1>
 			</div>
 
@@ -25,7 +25,7 @@ export default {
 
 	data() {
 	  return (
-          {	message: `Who's Using Roku?`, userList: [] }
+          {	message: `Who is watching?`, userList: [] }
       )
 	},
 
