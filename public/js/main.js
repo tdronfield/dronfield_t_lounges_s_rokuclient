@@ -47,12 +47,12 @@ const router = new VueRouter({
                 }
                 // redirect the user (push) back to the root (home/index) route
                 this.$router.push({ name: "root" });
-                this.currentUser = undefined;
+                this.currentuser = undefined;
             },
 
-            authenticateUser(user) {
+            authenticateuser(user) {
                 // debugger;
-                this.currentUser = user;
+                this.currentuser = user;
             }
         },
 
