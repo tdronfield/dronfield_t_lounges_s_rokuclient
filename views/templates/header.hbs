@@ -1,5 +1,5 @@
 <header class="header-container">
-	<button class="ham-menu" v-if="currentUser" @click="showMenu"><img src="" alt=""></button>
+	<button v-if="currentuser" class="ham-menu" @click="showMenu"><img src="" alt=""></button>
 
 	<nav class="ham-nav-container hidden">
 		<ul class="ham-nav">
@@ -21,9 +21,9 @@
 	<img class="logo" src="images/roku_light-logo.svg" alt="Roku logo" width="90">
 
 	<nav>
-		<ul v-if="currentUser">           
-			<li v-if="currentUser.user_avatar"><img class="small-avatar-rounded" :src='"images/" + currentUser.user_avatar'></li>
-			<li v-if="currentUser.user_admin"><i class="fas fa-cog"></i></li>
+		<ul v-if="currentuser">           
+			<li v-if="currentuser.user_avatar"><img class="small-avatar-rounded" :src='"images/" + currentuser.user_avatar'></li>
+			<li v-if="currentuser.user_admin"><i class="fas fa-cog"></i></li>
 			<li @click="logout"><i class="fas fa-power-off"></i></li>					
 		</ul>
 	</nav>
